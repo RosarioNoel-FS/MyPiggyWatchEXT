@@ -1,0 +1,522 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8B4F2E788033F10561475FB0 /* Pods_MyPiggy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED88D7E728B87E1D727B3747 /* Pods_MyPiggy.framework */; };
+		F80A5E47294E3AFE00963002 /* deleteTableViewControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80A5E46294E3AFE00963002 /* deleteTableViewControl.swift */; };
+		F813C6552936F04300B1F58D /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F813C6542936F04300B1F58D /* SignUpViewController.swift */; };
+		F813C6572936F48300B1F58D /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = F813C6562936F48300B1F58D /* Alert.swift */; };
+		F83343182945272200F968E0 /* GoalEditAndHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F83343172945272200F968E0 /* GoalEditAndHistoryViewController.swift */; };
+		F833431C2946459600F968E0 /* GoalListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F833431B2946459600F968E0 /* GoalListCell.swift */; };
+		F833431E294657FC00F968E0 /* BreakPiggyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F833431D294657FC00F968E0 /* BreakPiggyViewController.swift */; };
+		F833432029465B7D00F968E0 /* WithdrawAmountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F833431F29465B7D00F968E0 /* WithdrawAmountViewController.swift */; };
+		F83343222946827700F968E0 /* WithdrawHistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F83343212946827700F968E0 /* WithdrawHistoryCell.swift */; };
+		F8547ADB29354FD6007D2242 /* GoalSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8547ADA29354FD6007D2242 /* GoalSelectionViewController.swift */; };
+		F85F927529399B32007031A1 /* HomeGoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85F927429399B32007031A1 /* HomeGoalViewController.swift */; };
+		F8704C6029344E1D0043396A /* LandingHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8704C5F29344E1D0043396A /* LandingHomeViewController.swift */; };
+		F88AF4782936852F0067A0CE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F88AF4772936852F0067A0CE /* GoogleService-Info.plist */; };
+		F8961727293A742000A6D87F /* Goal.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8961726293A742000A6D87F /* Goal.swift */; };
+		F8961729293D2BCF00A6D87F /* CustomGoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8961728293D2BCF00A6D87F /* CustomGoalViewController.swift */; };
+		F896172B293D2FB500A6D87F /* BasicGoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F896172A293D2FB500A6D87F /* BasicGoalViewController.swift */; };
+		F8A5C295294CED81009E5B4E /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A5C294294CED81009E5B4E /* TabBarController.swift */; };
+		F8A5C297294CF282009E5B4E /* settingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A5C296294CF282009E5B4E /* settingsViewController.swift */; };
+		F8BFC8432939422700D0981C /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BFC8422939422600D0981C /* SignInViewController.swift */; };
+		F8EB3844292DD90E00BC5534 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EB3843292DD90E00BC5534 /* AppDelegate.swift */; };
+		F8EB3846292DD90E00BC5534 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EB3845292DD90E00BC5534 /* SceneDelegate.swift */; };
+		F8EB3848292DD90E00BC5534 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EB3847292DD90E00BC5534 /* ViewController.swift */; };
+		F8EB384B292DD90E00BC5534 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8EB3849292DD90E00BC5534 /* Main.storyboard */; };
+		F8EB384E292DD90E00BC5534 /* MyPiggy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F8EB384C292DD90E00BC5534 /* MyPiggy.xcdatamodeld */; };
+		F8EB3850292DD91000BC5534 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8EB384F292DD91000BC5534 /* Assets.xcassets */; };
+		F8EB3853292DD91000BC5534 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8EB3851292DD91000BC5534 /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2A6079E3D1689D1E975C6012 /* Pods-MyPiggy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyPiggy.release.xcconfig"; path = "Target Support Files/Pods-MyPiggy/Pods-MyPiggy.release.xcconfig"; sourceTree = "<group>"; };
+		DA176CB72494D3BEC829E0E1 /* Pods-MyPiggy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyPiggy.debug.xcconfig"; path = "Target Support Files/Pods-MyPiggy/Pods-MyPiggy.debug.xcconfig"; sourceTree = "<group>"; };
+		ED88D7E728B87E1D727B3747 /* Pods_MyPiggy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyPiggy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F80A5E46294E3AFE00963002 /* deleteTableViewControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = deleteTableViewControl.swift; sourceTree = "<group>"; };
+		F813C6542936F04300B1F58D /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		F813C6562936F48300B1F58D /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		F83343172945272200F968E0 /* GoalEditAndHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalEditAndHistoryViewController.swift; sourceTree = "<group>"; };
+		F833431B2946459600F968E0 /* GoalListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalListCell.swift; sourceTree = "<group>"; };
+		F833431D294657FC00F968E0 /* BreakPiggyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreakPiggyViewController.swift; sourceTree = "<group>"; };
+		F833431F29465B7D00F968E0 /* WithdrawAmountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WithdrawAmountViewController.swift; sourceTree = "<group>"; };
+		F83343212946827700F968E0 /* WithdrawHistoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WithdrawHistoryCell.swift; sourceTree = "<group>"; };
+		F8547ADA29354FD6007D2242 /* GoalSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalSelectionViewController.swift; sourceTree = "<group>"; };
+		F85F927429399B32007031A1 /* HomeGoalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeGoalViewController.swift; sourceTree = "<group>"; };
+		F8704C5F29344E1D0043396A /* LandingHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingHomeViewController.swift; sourceTree = "<group>"; };
+		F88AF4772936852F0067A0CE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F8961726293A742000A6D87F /* Goal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Goal.swift; sourceTree = "<group>"; };
+		F8961728293D2BCF00A6D87F /* CustomGoalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomGoalViewController.swift; sourceTree = "<group>"; };
+		F896172A293D2FB500A6D87F /* BasicGoalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicGoalViewController.swift; sourceTree = "<group>"; };
+		F8A5C294294CED81009E5B4E /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		F8A5C296294CF282009E5B4E /* settingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = settingsViewController.swift; sourceTree = "<group>"; };
+		F8BFC8422939422600D0981C /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		F8EB3840292DD90E00BC5534 /* MyPiggy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyPiggy.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8EB3843292DD90E00BC5534 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F8EB3845292DD90E00BC5534 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		F8EB3847292DD90E00BC5534 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F8EB384A292DD90E00BC5534 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F8EB384D292DD90E00BC5534 /* MyPiggy.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MyPiggy.xcdatamodel; sourceTree = "<group>"; };
+		F8EB384F292DD91000BC5534 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F8EB3852292DD91000BC5534 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F8EB3854292DD91000BC5534 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F8EB383D292DD90E00BC5534 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B4F2E788033F10561475FB0 /* Pods_MyPiggy.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4423AA0224A72B9B1A4A16D7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DA176CB72494D3BEC829E0E1 /* Pods-MyPiggy.debug.xcconfig */,
+				2A6079E3D1689D1E975C6012 /* Pods-MyPiggy.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		56B17313D4931211097A7E34 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ED88D7E728B87E1D727B3747 /* Pods_MyPiggy.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F8EB3837292DD90E00BC5534 = {
+			isa = PBXGroup;
+			children = (
+				F8EB3842292DD90E00BC5534 /* MyPiggy */,
+				F8EB3841292DD90E00BC5534 /* Products */,
+				4423AA0224A72B9B1A4A16D7 /* Pods */,
+				56B17313D4931211097A7E34 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		F8EB3841292DD90E00BC5534 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F8EB3840292DD90E00BC5534 /* MyPiggy.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F8EB3842292DD90E00BC5534 /* MyPiggy */ = {
+			isa = PBXGroup;
+			children = (
+				F88AF4772936852F0067A0CE /* GoogleService-Info.plist */,
+				F8EB3843292DD90E00BC5534 /* AppDelegate.swift */,
+				F8EB3845292DD90E00BC5534 /* SceneDelegate.swift */,
+				F8EB3847292DD90E00BC5534 /* ViewController.swift */,
+				F8704C5F29344E1D0043396A /* LandingHomeViewController.swift */,
+				F80A5E46294E3AFE00963002 /* deleteTableViewControl.swift */,
+				F833431B2946459600F968E0 /* GoalListCell.swift */,
+				F8EB3849292DD90E00BC5534 /* Main.storyboard */,
+				F8A5C296294CF282009E5B4E /* settingsViewController.swift */,
+				F8A5C294294CED81009E5B4E /* TabBarController.swift */,
+				F8961728293D2BCF00A6D87F /* CustomGoalViewController.swift */,
+				F896172A293D2FB500A6D87F /* BasicGoalViewController.swift */,
+				F8961726293A742000A6D87F /* Goal.swift */,
+				F83343172945272200F968E0 /* GoalEditAndHistoryViewController.swift */,
+				F83343212946827700F968E0 /* WithdrawHistoryCell.swift */,
+				F85F927429399B32007031A1 /* HomeGoalViewController.swift */,
+				F8BFC8422939422600D0981C /* SignInViewController.swift */,
+				F813C6542936F04300B1F58D /* SignUpViewController.swift */,
+				F813C6562936F48300B1F58D /* Alert.swift */,
+				F8547ADA29354FD6007D2242 /* GoalSelectionViewController.swift */,
+				F833431D294657FC00F968E0 /* BreakPiggyViewController.swift */,
+				F833431F29465B7D00F968E0 /* WithdrawAmountViewController.swift */,
+				F8EB384F292DD91000BC5534 /* Assets.xcassets */,
+				F8EB3851292DD91000BC5534 /* LaunchScreen.storyboard */,
+				F8EB3854292DD91000BC5534 /* Info.plist */,
+				F8EB384C292DD90E00BC5534 /* MyPiggy.xcdatamodeld */,
+			);
+			path = MyPiggy;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F8EB383F292DD90E00BC5534 /* MyPiggy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F8EB3857292DD91000BC5534 /* Build configuration list for PBXNativeTarget "MyPiggy" */;
+			buildPhases = (
+				E1919A3E2D3C3091DC62506E /* [CP] Check Pods Manifest.lock */,
+				F8EB383C292DD90E00BC5534 /* Sources */,
+				F8EB383D292DD90E00BC5534 /* Frameworks */,
+				F8EB383E292DD90E00BC5534 /* Resources */,
+				1671FB91FA7A54651BD458C9 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MyPiggy;
+			productName = MyPiggy;
+			productReference = F8EB3840292DD90E00BC5534 /* MyPiggy.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F8EB3838292DD90E00BC5534 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1400;
+				LastUpgradeCheck = 1400;
+				TargetAttributes = {
+					F8EB383F292DD90E00BC5534 = {
+						CreatedOnToolsVersion = 14.0.1;
+					};
+				};
+			};
+			buildConfigurationList = F8EB383B292DD90E00BC5534 /* Build configuration list for PBXProject "MyPiggy" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F8EB3837292DD90E00BC5534;
+			productRefGroup = F8EB3841292DD90E00BC5534 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F8EB383F292DD90E00BC5534 /* MyPiggy */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F8EB383E292DD90E00BC5534 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8EB3853292DD91000BC5534 /* LaunchScreen.storyboard in Resources */,
+				F88AF4782936852F0067A0CE /* GoogleService-Info.plist in Resources */,
+				F8EB3850292DD91000BC5534 /* Assets.xcassets in Resources */,
+				F8EB384B292DD90E00BC5534 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1671FB91FA7A54651BD458C9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MyPiggy/Pods-MyPiggy-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MyPiggy/Pods-MyPiggy-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MyPiggy/Pods-MyPiggy-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E1919A3E2D3C3091DC62506E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MyPiggy-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F8EB383C292DD90E00BC5534 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F85F927529399B32007031A1 /* HomeGoalViewController.swift in Sources */,
+				F8547ADB29354FD6007D2242 /* GoalSelectionViewController.swift in Sources */,
+				F8961729293D2BCF00A6D87F /* CustomGoalViewController.swift in Sources */,
+				F813C6552936F04300B1F58D /* SignUpViewController.swift in Sources */,
+				F8EB3848292DD90E00BC5534 /* ViewController.swift in Sources */,
+				F896172B293D2FB500A6D87F /* BasicGoalViewController.swift in Sources */,
+				F83343222946827700F968E0 /* WithdrawHistoryCell.swift in Sources */,
+				F8EB3844292DD90E00BC5534 /* AppDelegate.swift in Sources */,
+				F8704C6029344E1D0043396A /* LandingHomeViewController.swift in Sources */,
+				F8961727293A742000A6D87F /* Goal.swift in Sources */,
+				F8A5C295294CED81009E5B4E /* TabBarController.swift in Sources */,
+				F8BFC8432939422700D0981C /* SignInViewController.swift in Sources */,
+				F833431C2946459600F968E0 /* GoalListCell.swift in Sources */,
+				F8EB384E292DD90E00BC5534 /* MyPiggy.xcdatamodeld in Sources */,
+				F80A5E47294E3AFE00963002 /* deleteTableViewControl.swift in Sources */,
+				F813C6572936F48300B1F58D /* Alert.swift in Sources */,
+				F8A5C297294CF282009E5B4E /* settingsViewController.swift in Sources */,
+				F833431E294657FC00F968E0 /* BreakPiggyViewController.swift in Sources */,
+				F833432029465B7D00F968E0 /* WithdrawAmountViewController.swift in Sources */,
+				F83343182945272200F968E0 /* GoalEditAndHistoryViewController.swift in Sources */,
+				F8EB3846292DD90E00BC5534 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F8EB3849292DD90E00BC5534 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F8EB384A292DD90E00BC5534 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F8EB3851292DD91000BC5534 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F8EB3852292DD91000BC5534 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F8EB3855292DD91000BC5534 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F8EB3856292DD91000BC5534 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F8EB3858292DD91000BC5534 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DA176CB72494D3BEC829E0E1 /* Pods-MyPiggy.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MyPiggy/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.noelrosario.MyPiggy;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F8EB3859292DD91000BC5534 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2A6079E3D1689D1E975C6012 /* Pods-MyPiggy.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MyPiggy/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.noelrosario.MyPiggy;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F8EB383B292DD90E00BC5534 /* Build configuration list for PBXProject "MyPiggy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F8EB3855292DD91000BC5534 /* Debug */,
+				F8EB3856292DD91000BC5534 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F8EB3857292DD91000BC5534 /* Build configuration list for PBXNativeTarget "MyPiggy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F8EB3858292DD91000BC5534 /* Debug */,
+				F8EB3859292DD91000BC5534 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		F8EB384C292DD90E00BC5534 /* MyPiggy.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F8EB384D292DD90E00BC5534 /* MyPiggy.xcdatamodel */,
+			);
+			currentVersion = F8EB384D292DD90E00BC5534 /* MyPiggy.xcdatamodel */;
+			path = MyPiggy.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = F8EB3838292DD90E00BC5534 /* Project object */;
+}
