@@ -31,6 +31,7 @@
 		F8C010782A65D56C000C0051 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8C010772A65D56C000C0051 /* Assets.xcassets */; };
 		F8C0107B2A65D56C000C0051 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8C0107A2A65D56C000C0051 /* Preview Assets.xcassets */; };
 		F8C0107E2A65D56C000C0051 /* MyPiggyWatch Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = F8C010712A65D56A000C0051 /* MyPiggyWatch Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		F8C010842A65D8AB000C0051 /* Goal.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C010832A65D8AB000C0051 /* Goal.swift */; };
 		F8EB3844292DD90E00BC5534 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EB3843292DD90E00BC5534 /* AppDelegate.swift */; };
 		F8EB3846292DD90E00BC5534 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EB3845292DD90E00BC5534 /* SceneDelegate.swift */; };
 		F8EB3848292DD90E00BC5534 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EB3847292DD90E00BC5534 /* ViewController.swift */; };
@@ -91,6 +92,7 @@
 		F8C010752A65D56A000C0051 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		F8C010772A65D56C000C0051 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F8C0107A2A65D56C000C0051 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F8C010832A65D8AB000C0051 /* Goal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Goal.swift; sourceTree = "<group>"; };
 		F8EB3840292DD90E00BC5534 /* MyPiggy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyPiggy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8EB3843292DD90E00BC5534 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F8EB3845292DD90E00BC5534 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 				F8C010752A65D56A000C0051 /* ContentView.swift */,
 				F8C010772A65D56C000C0051 /* Assets.xcassets */,
 				F8C010792A65D56C000C0051 /* Preview Content */,
+				F8C010832A65D8AB000C0051 /* Goal.swift */,
 			);
 			path = "MyPiggyWatch Watch App";
 			sourceTree = "<group>";
@@ -359,6 +362,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8C010762A65D56A000C0051 /* ContentView.swift in Sources */,
+				F8C010842A65D8AB000C0051 /* Goal.swift in Sources */,
 				F8C010742A65D56A000C0051 /* MyPiggyWatchApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,13 +8,13 @@
 import Foundation
 import UIKit
 
-enum GoalType {
+enum GoalType: String, Codable {
     case basic
     case custom
     case broken
 }
 
-class Goal
+class Goal: Codable, Identifiable
 {
     var goalKey: String
     var goalName: String
@@ -29,6 +29,9 @@ class Goal
     var completionDate: String
     
     init(json: [String: Any]) {
+        
+        // Initialize the goal properties from the JSON dictionary
+        
         self.goalKey = json["key"] as? String ?? ""
         self.goalName = json["goalName"] as? String ?? ""
         self.isBroken = json["isBroken"] as? Bool ?? false
@@ -50,13 +53,15 @@ class Goal
 }
 
 
-class History
+class History: Codable
 {
     let date: String
     let key: String
     let totalBalance: String
     let saveAmout: String
     let isWithdrawl: Bool
+    
+    // Initialize the history properties from the JSON dictionary
     
     init(json: [String: Any]) {
         self.date = json["date"] as? String ?? ""
