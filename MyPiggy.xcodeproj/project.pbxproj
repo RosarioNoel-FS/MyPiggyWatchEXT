@@ -26,6 +26,11 @@
 		F8A5C295294CED81009E5B4E /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A5C294294CED81009E5B4E /* TabBarController.swift */; };
 		F8A5C297294CF282009E5B4E /* settingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A5C296294CF282009E5B4E /* settingsViewController.swift */; };
 		F8BFC8432939422700D0981C /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BFC8422939422600D0981C /* SignInViewController.swift */; };
+		F8C010742A65D56A000C0051 /* MyPiggyWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C010732A65D56A000C0051 /* MyPiggyWatchApp.swift */; };
+		F8C010762A65D56A000C0051 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C010752A65D56A000C0051 /* ContentView.swift */; };
+		F8C010782A65D56C000C0051 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8C010772A65D56C000C0051 /* Assets.xcassets */; };
+		F8C0107B2A65D56C000C0051 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8C0107A2A65D56C000C0051 /* Preview Assets.xcassets */; };
+		F8C0107E2A65D56C000C0051 /* MyPiggyWatch Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = F8C010712A65D56A000C0051 /* MyPiggyWatch Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		F8EB3844292DD90E00BC5534 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EB3843292DD90E00BC5534 /* AppDelegate.swift */; };
 		F8EB3846292DD90E00BC5534 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EB3845292DD90E00BC5534 /* SceneDelegate.swift */; };
 		F8EB3848292DD90E00BC5534 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EB3847292DD90E00BC5534 /* ViewController.swift */; };
@@ -34,6 +39,30 @@
 		F8EB3850292DD91000BC5534 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8EB384F292DD91000BC5534 /* Assets.xcassets */; };
 		F8EB3853292DD91000BC5534 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8EB3851292DD91000BC5534 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F8C0107C2A65D56C000C0051 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F8EB3838292DD90E00BC5534 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F8C010702A65D56A000C0051;
+			remoteInfo = "MyPiggyWatch Watch App";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F8C0107F2A65D56C000C0051 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				F8C0107E2A65D56C000C0051 /* MyPiggyWatch Watch App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		2A6079E3D1689D1E975C6012 /* Pods-MyPiggy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyPiggy.release.xcconfig"; path = "Target Support Files/Pods-MyPiggy/Pods-MyPiggy.release.xcconfig"; sourceTree = "<group>"; };
@@ -57,6 +86,11 @@
 		F8A5C294294CED81009E5B4E /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		F8A5C296294CF282009E5B4E /* settingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = settingsViewController.swift; sourceTree = "<group>"; };
 		F8BFC8422939422600D0981C /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		F8C010712A65D56A000C0051 /* MyPiggyWatch Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MyPiggyWatch Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8C010732A65D56A000C0051 /* MyPiggyWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPiggyWatchApp.swift; sourceTree = "<group>"; };
+		F8C010752A65D56A000C0051 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		F8C010772A65D56C000C0051 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F8C0107A2A65D56C000C0051 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F8EB3840292DD90E00BC5534 /* MyPiggy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyPiggy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8EB3843292DD90E00BC5534 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F8EB3845292DD90E00BC5534 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +103,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		F8C0106E2A65D56A000C0051 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F8EB383D292DD90E00BC5534 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -97,10 +138,30 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		F8C010722A65D56A000C0051 /* MyPiggyWatch Watch App */ = {
+			isa = PBXGroup;
+			children = (
+				F8C010732A65D56A000C0051 /* MyPiggyWatchApp.swift */,
+				F8C010752A65D56A000C0051 /* ContentView.swift */,
+				F8C010772A65D56C000C0051 /* Assets.xcassets */,
+				F8C010792A65D56C000C0051 /* Preview Content */,
+			);
+			path = "MyPiggyWatch Watch App";
+			sourceTree = "<group>";
+		};
+		F8C010792A65D56C000C0051 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				F8C0107A2A65D56C000C0051 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
 		F8EB3837292DD90E00BC5534 = {
 			isa = PBXGroup;
 			children = (
 				F8EB3842292DD90E00BC5534 /* MyPiggy */,
+				F8C010722A65D56A000C0051 /* MyPiggyWatch Watch App */,
 				F8EB3841292DD90E00BC5534 /* Products */,
 				4423AA0224A72B9B1A4A16D7 /* Pods */,
 				56B17313D4931211097A7E34 /* Frameworks */,
@@ -111,6 +172,7 @@
 			isa = PBXGroup;
 			children = (
 				F8EB3840292DD90E00BC5534 /* MyPiggy.app */,
+				F8C010712A65D56A000C0051 /* MyPiggyWatch Watch App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -151,6 +213,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		F8C010702A65D56A000C0051 /* MyPiggyWatch Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F8C010822A65D56C000C0051 /* Build configuration list for PBXNativeTarget "MyPiggyWatch Watch App" */;
+			buildPhases = (
+				F8C0106D2A65D56A000C0051 /* Sources */,
+				F8C0106E2A65D56A000C0051 /* Frameworks */,
+				F8C0106F2A65D56A000C0051 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "MyPiggyWatch Watch App";
+			productName = "MyPiggyWatch Watch App";
+			productReference = F8C010712A65D56A000C0051 /* MyPiggyWatch Watch App.app */;
+			productType = "com.apple.product-type.application";
+		};
 		F8EB383F292DD90E00BC5534 /* MyPiggy */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F8EB3857292DD91000BC5534 /* Build configuration list for PBXNativeTarget "MyPiggy" */;
@@ -160,10 +239,12 @@
 				F8EB383D292DD90E00BC5534 /* Frameworks */,
 				F8EB383E292DD90E00BC5534 /* Resources */,
 				1671FB91FA7A54651BD458C9 /* [CP] Embed Pods Frameworks */,
+				F8C0107F2A65D56C000C0051 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				F8C0107D2A65D56C000C0051 /* PBXTargetDependency */,
 			);
 			name = MyPiggy;
 			productName = MyPiggy;
@@ -177,9 +258,12 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1400;
+				LastSwiftUpdateCheck = 1430;
 				LastUpgradeCheck = 1400;
 				TargetAttributes = {
+					F8C010702A65D56A000C0051 = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
 					F8EB383F292DD90E00BC5534 = {
 						CreatedOnToolsVersion = 14.0.1;
 					};
@@ -199,11 +283,21 @@
 			projectRoot = "";
 			targets = (
 				F8EB383F292DD90E00BC5534 /* MyPiggy */,
+				F8C010702A65D56A000C0051 /* MyPiggyWatch Watch App */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		F8C0106F2A65D56A000C0051 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8C0107B2A65D56C000C0051 /* Preview Assets.xcassets in Resources */,
+				F8C010782A65D56C000C0051 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F8EB383E292DD90E00BC5534 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -260,6 +354,15 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		F8C0106D2A65D56A000C0051 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8C010762A65D56A000C0051 /* ContentView.swift in Sources */,
+				F8C010742A65D56A000C0051 /* MyPiggyWatchApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F8EB383C292DD90E00BC5534 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -290,6 +393,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		F8C0107D2A65D56C000C0051 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F8C010702A65D56A000C0051 /* MyPiggyWatch Watch App */;
+			targetProxy = F8C0107C2A65D56C000C0051 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		F8EB3849292DD90E00BC5534 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -310,6 +421,64 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		F8C010802A65D56C000C0051 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"MyPiggyWatch Watch App/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = MyPiggyWatch;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.noelrosario.MyPiggy;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.noelrosario.MyPiggy.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 9.4;
+			};
+			name = Debug;
+		};
+		F8C010812A65D56C000C0051 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"MyPiggyWatch Watch App/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = MyPiggyWatch;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.noelrosario.MyPiggy;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.noelrosario.MyPiggy.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 9.4;
+			};
+			name = Release;
+		};
 		F8EB3855292DD91000BC5534 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -428,6 +597,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = DA176CB72494D3BEC829E0E1 /* Pods-MyPiggy.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -457,6 +627,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2A6079E3D1689D1E975C6012 /* Pods-MyPiggy.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -485,6 +656,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		F8C010822A65D56C000C0051 /* Build configuration list for PBXNativeTarget "MyPiggyWatch Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F8C010802A65D56C000C0051 /* Debug */,
+				F8C010812A65D56C000C0051 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		F8EB383B292DD90E00BC5534 /* Build configuration list for PBXProject "MyPiggy" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
