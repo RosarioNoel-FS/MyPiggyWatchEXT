@@ -9,6 +9,8 @@ import UIKit
 import FirebaseAuth
 import FirebaseFirestore
 import FirebaseDatabase
+import WatchConnectivity
+
 
 //Noel !!!!!!!!!
 enum SavingType: String {
@@ -101,15 +103,44 @@ class CustomGoalViewController: UIViewController {
                 }
                 else
                 {
-
+                    // Notify to update goals and navigate to root
                     NotificationCenter.default.post(name: Notification.Name("updateGoals"), object: nil, userInfo: [:])
                     self.navigationController?.popToRootViewController(animated: true)
+                    
+                    // Create a dictionary representing the new goal
+                                    let newGoalDict: [String: Any] = [
+                                        "key": newRef.key!,
+                                        "goalName": self.goalNameTF.text!,
+                                        "isBroken": false,
+                                        "amountCollected": "0.0",
+                                        "type": "Custom",
+                                        "goalTotal": self.goalTotalTF.text!,
+                                        "savingType": self.savingType.rawValue,
+                                        "completionDate": goalCompletionDate
+                                    ]
+                                    // Initialize a new Goal object
+                                    let newGoal = Goal(json: newGoalDict)
+                                    // Send the new goal to the watch
+                                    self.sendGoalToWatch(goal: newGoal)
                 }
                 
             }
             
         }
         
+    }
+    
+    func sendGoalToWatch(goal: Goal) {
+        if WCSession.default.isWatchAppInstalled {
+            do {
+                let goalData = try JSONEncoder().encode(goal)
+                WCSession.default.sendMessageData(goalData, replyHandler: nil, errorHandler: { (error) in
+                    print("Failed to send data to watch. Error: \(error.localizedDescription)")
+                })
+            } catch {
+                print("Failed to encode goal. Error: \(error.localizedDescription)")
+            }
+        }
     }
     
     
