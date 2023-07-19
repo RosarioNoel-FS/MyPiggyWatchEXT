@@ -139,9 +139,7 @@ class CustomGoalViewController: UIViewController {
                 let goalData = try JSONEncoder().encode(goal)
                 let goalDictionary = ["GoalData": goalData]
 
-                //Check Data Transfer[DEBUG]
-                let transfer = WCSession.default.transferUserInfo(goalDictionary)
-                print("Data transfer started: \(transfer.isTransferring)")
+                WCSession.default.sendMessage(goalDictionary, replyHandler: nil, errorHandler: nil)
                 
             } catch {
                 print("Failed to encode goal with error: \(error)")
