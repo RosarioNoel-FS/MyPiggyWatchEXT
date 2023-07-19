@@ -523,6 +523,15 @@
                                     <action selector="createPiggyBankTapped:" destination="c3I-fx-Kxu" eventType="touchUpInside" id="brp-PP-Jbo"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dfX-HS-AZb">
+                                <rect key="frame" x="20" y="731" width="390" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Send DUMMY data"/>
+                                <connections>
+                                    <action selector="DummyDataSender:" destination="c3I-fx-Kxu" eventType="touchUpInside" id="GvD-vK-RCQ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="NkQ-IC-471"/>
                         <color key="backgroundColor" red="0.201452136" green="0.16344055530000001" blue="0.35295891759999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -556,7 +565,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cP7-ab-YQX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1962" y="981"/>
+            <point key="canvasLocation" x="1961.8604651162791" y="980.47210300429185"/>
         </scene>
         <!--Custom Goal View Controller-->
         <scene sceneID="tVK-21-ZZE">

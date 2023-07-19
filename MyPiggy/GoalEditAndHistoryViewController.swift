@@ -50,7 +50,6 @@ class GoalEditAndHistoryViewController: UIViewController, UITableViewDelegate, U
                                                object: nil)
     }
     
-    
     @objc func updateGoals(notification: Notification) {
         
         // Update goals when a notification is received
@@ -262,22 +261,38 @@ class GoalEditAndHistoryViewController: UIViewController, UITableViewDelegate, U
         
         // After the goal has been updated in the database, send it to the watch
                 if let updatedGoal = self.goal {
+                    print("WCSession is reachable. Transferring data.")
                     self.sendGoalToWatch(goal: updatedGoal)
                 }
         
     }
     
     func sendGoalToWatch(goal: Goal) {
-        if WCSession.default.isWatchAppInstalled {
+        if WCSession.default.isReachable {
             do {
+                //Check Reachability:[DEBUG]
+                print("WCSession is reachable. Transferring data.")
+                
                 let goalData = try JSONEncoder().encode(goal)
-                WCSession.default.sendMessageData(goalData, replyHandler: nil, errorHandler: { (error) in
-                    print("Failed to send data to watch. Error: \(error.localizedDescription)")
-                })
+                let goalDictionary = ["GoalData": goalData]
+                
+                WCSession.default.sendMessage(goalDictionary, replyHandler: nil, errorHandler: nil)
+                
+                //Check Data Transfer[DEBUG]
+               // let transfer = WCSession.default.transferUserInfo(goalDictionary)
+               // print("Data transfer started: \(transfer.isTransferring)")
+
             } catch {
-                print("Failed to encode goal. Error: \(error.localizedDescription)")
+                print("Failed to encode goal with error: \(error)")
             }
         }
+        else
+        {
+            //Check Reachability:[DEBUG]
+            print("WCSession is not reachable.")
+
+        }
+        
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -319,6 +334,4 @@ extension Date {
         dateformat.dateFormat = format
         return dateformat.string(from: self)
     }
-
-
 }

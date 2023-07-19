@@ -131,15 +131,27 @@ class CustomGoalViewController: UIViewController {
     }
     
     func sendGoalToWatch(goal: Goal) {
-        if WCSession.default.isWatchAppInstalled {
+        if WCSession.default.isReachable {
             do {
+                //Check Reachability:[DEBUG]
+                print("WCSession is reachable. Transferring data.")
+
                 let goalData = try JSONEncoder().encode(goal)
-                WCSession.default.sendMessageData(goalData, replyHandler: nil, errorHandler: { (error) in
-                    print("Failed to send data to watch. Error: \(error.localizedDescription)")
-                })
+                let goalDictionary = ["GoalData": goalData]
+
+                //Check Data Transfer[DEBUG]
+                let transfer = WCSession.default.transferUserInfo(goalDictionary)
+                print("Data transfer started: \(transfer.isTransferring)")
+                
             } catch {
-                print("Failed to encode goal. Error: \(error.localizedDescription)")
+                print("Failed to encode goal with error: \(error)")
             }
+        }
+        else
+        {
+            //Check Reachability:[DEBUG]
+            print("WCSession is not reachable.")
+
         }
     }
     

@@ -50,17 +50,17 @@ class BasicGoalViewController: UIViewController {
                     NotificationCenter.default.post(name: Notification.Name("updateGoals"), object: nil, userInfo: [:])
                     self.navigationController?.popToRootViewController(animated: true)
                     
-                    // Create a dictionary representing the new goal
-                                    let newGoalDict: [String: Any] = [
-                                        "key": newRef.key!,
-                                        "goalName": self.goalNameTF.text!,
-                                        "isBroken": false,
-                                        "amountCollected": "0.0",
-                                        "type": "Basic",
-                                        "goalTotal": "0.0",
-                                        "savingType": "",
-                                        "completionDate": ""
-                                    ]
+                        // Create a dictionary representing the new goal
+                                        let newGoalDict: [String: Any] = [
+                                            "key": newRef.key!,
+                                            "goalName": self.goalNameTF.text!,
+                                            "isBroken": false,
+                                            "amountCollected": "0.0",
+                                            "type": "Basic",
+                                            "goalTotal": "0.0",
+                                            "savingType": "",
+                                            "completionDate": ""
+                                        ]
                                     // Initialize a new Goal object
                                     let newGoal = Goal(json: newGoalDict)
                                     // Send the new goal to the watch
@@ -71,15 +71,27 @@ class BasicGoalViewController: UIViewController {
     }
     
     func sendGoalToWatch(goal: Goal) {
-        if WCSession.default.isWatchAppInstalled {
+        if WCSession.default.isReachable {
             do {
+                
+                //Check Reachability:[DEBUG]
+                print("WCSession is reachable. Transferring data.")
+                
                 let goalData = try JSONEncoder().encode(goal)
-                WCSession.default.sendMessageData(goalData, replyHandler: nil, errorHandler: { (error) in
-                    print("Failed to send data to watch. Error: \(error.localizedDescription)")
-                })
-            } catch {
-                print("Failed to encode goal. Error: \(error.localizedDescription)")
+                let goalDictionary = ["GoalData": goalData]
+                
+                //Check Data Transfer[DEBUG]
+                let transfer = WCSession.default.transferUserInfo(goalDictionary)
+                print("Data transfer started: \(transfer.isTransferring) IT WORKED!!!")            } catch {
+                
+                print("Failed to encode goal with error: \(error) NOOOOO!!!")
             }
+        }
+        else
+        {
+            //Check Reachability:[DEBUG]
+            print("WCSession is not reachable.")
+
         }
     }
     
@@ -95,6 +107,26 @@ class BasicGoalViewController: UIViewController {
     }
     
    
+    @IBAction func DummyDataSender(_ sender: Any) {
+        let test_goals: [String: Any] =
+            [
+                "key": "goal1",
+                "goalName": "Buy a new car",
+                "isBroken": false,
+                "amountCollected": "0.0",
+                "type": "Basic",
+                "goalTotal": "10000.0",
+                "savingType": "",
+                "completionDate": ""
+            
+            ]
+        
+        // Initialize a new Goal object
+        let mynewGoal = Goal(json: test_goals)
+        // Send the new goal to the watch
+        self.sendGoalToWatch(goal: mynewGoal)
+
+    }
     
     /*
     // MARK: - Navigation
