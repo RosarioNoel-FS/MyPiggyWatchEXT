@@ -9,6 +9,7 @@ import UIKit
 import FirebaseAuth
 import FirebaseFirestore
 import FirebaseDatabase
+import WatchConnectivity
 
 class BreakPiggyViewController: UIViewController {
 
@@ -39,6 +40,13 @@ class BreakPiggyViewController: UIViewController {
                 
                 NotificationCenter.default.post(name: Notification.Name("updateGoals"), object: nil, userInfo: [:])
                 
+                // After the goal has been updated in the database, send it to the watch
+                        if let updatedGoal = self.goal {
+                            print("WCSession is reachable. Transferring data.")
+                            self.sendGoalToWatch(goal: updatedGoal)
+                        }
+                
+                
                 self.dismiss(animated: true)
             }
             
@@ -46,6 +54,30 @@ class BreakPiggyViewController: UIViewController {
     }
     
 
+    func sendGoalToWatch(goal: Goal) {
+        if WCSession.default.isReachable {
+            do {
+                
+                //Check Reachability:[DEBUG]
+                print("WCSession is reachable. Transferring data.")
+                
+                let goalData = try JSONEncoder().encode(goal)
+                let goalDictionary = ["GoalData": goalData]
+                
+                WCSession.default.sendMessage(goalDictionary, replyHandler: nil, errorHandler: nil)
+                
+            } catch {
+                
+                print("Failed to encode goal with error: \(error) NOOOOO!!!")
+            }
+        }
+        else
+        {
+            //Check Reachability:[DEBUG]
+            print("WCSession is not reachable.")
+
+        }
+    }
     
     @IBAction func continueSavingButton(_ sender: UIButton) {
         self.dismiss(animated: true)

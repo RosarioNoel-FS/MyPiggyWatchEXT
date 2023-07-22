@@ -42,7 +42,7 @@ class GoalListCell: UITableViewCell {
         {
             self.goalimageview.image = custompiggyImage
         }
-        else 
+        if  goal.isBroken
         {
             self.goalimageview.image = brokenPiggyImage
         }

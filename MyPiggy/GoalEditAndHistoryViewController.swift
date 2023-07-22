@@ -15,6 +15,9 @@ import WatchConnectivity
 class GoalEditAndHistoryViewController: UIViewController, UITableViewDelegate, UITableViewDataSource  {
 
     var goal: Goal?
+    @IBOutlet weak var goalTypeImageBottomConstraint: NSLayoutConstraint?
+
+    
     private var histories = [History]()
     
     
@@ -106,6 +109,15 @@ class GoalEditAndHistoryViewController: UIViewController, UITableViewDelegate, U
                     
                     // Hide elements for broken goals
                     self.goalTypeImage.image = UIImage(named: "broken")
+                    
+                    
+                    
+                    
+                    // Add new constraint with 30 points of space to the tableView
+                    self.goalTypeImageBottomConstraint = self.goalTypeImage.bottomAnchor.constraint(equalTo: self.tableView.topAnchor, constant: -30)
+                    self.goalTypeImageBottomConstraint?.isActive = true
+
+                    
                     self.takefrompiggyView.isHidden = true
                     self.breakfrompiggyview.isHidden = true
                     self.enterAmonutView.isHidden = true
