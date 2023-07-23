@@ -16,10 +16,11 @@ enum GoalType: String, Codable {
 
 class Goal: Codable, Identifiable
 {
+    
     var goalKey: String
     var goalName: String
     var isBroken: Bool
-    var amountCollectString: String
+    var amountCollectString: String 
     var totalAmountCollected: Double
     var goalTotalAmount: Double
     var goalType: GoalType = .basic

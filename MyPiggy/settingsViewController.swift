@@ -9,6 +9,7 @@ import UIKit
 import FirebaseAuth
 import FirebaseFirestore
 import FirebaseDatabase
+import WatchConnectivity
 
 class settingsViewController: UIViewController {
 
@@ -36,6 +37,10 @@ class settingsViewController: UIViewController {
         
         do
         {
+            // clear goals on watch
+            self.clearGoalsOnWatch()
+            
+            // sign out
             try auth.signOut()
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let vc = storyboard.instantiateViewController(withIdentifier: "ViewController")
@@ -48,6 +53,12 @@ class settingsViewController: UIViewController {
         catch let signOutError
         {
             showAlert(withTitle: "Error", Message: signOutError.localizedDescription, controller: self)
+        }
+    }
+    
+    func clearGoalsOnWatch() {
+        if WCSession.default.isReachable {
+            WCSession.default.sendMessage(["ClearGoals": true], replyHandler: nil, errorHandler: nil)
         }
     }
     

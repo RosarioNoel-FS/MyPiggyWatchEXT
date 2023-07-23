@@ -9,6 +9,7 @@ import UIKit
 import FirebaseAuth
 import FirebaseFirestore
 import FirebaseDatabase
+import WatchConnectivity
 //Noel !!!!!!!!!
 
 class LandingHomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
@@ -84,37 +85,55 @@ class LandingHomeViewController: UIViewController, UITableViewDelegate, UITableV
         //get current user ID
         let userID = Auth.auth().currentUser?.uid ?? ""
         // reference to the goals
-        
+
         let newRef = ref.child("Users").child(userID).child("goals").getData { error, snapshot in
             for child in snapshot!.children.allObjects as? [DataSnapshot] ?? [] {
                 //if there is a value in the child cast as dictionary
                 if let json = child.value as? [String: Any] {
-                    //passin the dictionary of goal data into our goal obj
+                    //pass in the dictionary of goal data into our goal obj
                     let goal = Goal(json: json)
-                    
+
                     //add the new goal to our goals array
-                    //self.goals.append(goal) <=---------CHANGED THIS
-                    self.goals.insert(goal, at: 0) //<------New Line
+                    self.goals.insert(goal, at: 0)
+
+                    // send the goals to the watch
+                    self.sendGoalsToWatch()
+
                     DispatchQueue.main.async {
                         self.goalTableView.reloadData()
                     }
                 }
             }
-            
-            self.loadingindicator.stopAnimating()
-            if self.goals.count != 0
-            {
-                self.myGoalsView.isHidden = false
-                self.homeImage.isHidden = true
-            }
-            else
-            {
-                self.myGoalsView.isHidden = true
-                self.homeImage.isHidden = false
+
+            DispatchQueue.main.async {
+                self.loadingindicator.stopAnimating()
+                if self.goals.count != 0
+                {
+                    self.myGoalsView.isHidden = false
+                    self.homeImage.isHidden = true
+                }
+                else
+                {
+                    self.myGoalsView.isHidden = true
+                    self.homeImage.isHidden = false
+                }
             }
         }
     }
 
+    
+    func sendGoalsToWatch() {
+        if WCSession.default.isReachable {
+            do {
+                let data = try JSONEncoder().encode(self.goals)
+                WCSession.default.sendMessage(["GoalData": data], replyHandler: nil, errorHandler: nil)
+            } catch {
+                print("Failed to encode goals with error: \(error)")
+            }
+        }
+    }
+
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 200
     }
@@ -165,6 +184,26 @@ class LandingHomeViewController: UIViewController, UITableViewDelegate, UITableV
         self.navigationController?.pushViewController(vc, animated: true)
         //self.present(nav, animated: true)
     }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            let goalToDelete = goals[indexPath.row]
+            let userID = Auth.auth().currentUser?.uid ?? ""
+            let ref = Database.database().reference()
+            ref.child("Users").child(userID).child("goals").child(goalToDelete.goalKey).removeValue { error, _ in
+                if let error = error {
+                    print("Failed to delete goal with error: \(error)")
+                } else {
+                    print("Goal deleted successfully")
+                    self.goals.remove(at: indexPath.row)
+                    tableView.deleteRows(at: [indexPath], with: .fade)
+                    // Update the goals on the watch side
+                    self.sendGoalsToWatch()
+                }
+            }
+        }
+    }
+
     
 }
 

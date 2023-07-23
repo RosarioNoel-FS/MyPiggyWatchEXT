@@ -9,6 +9,7 @@ import UIKit
 import FirebaseAuth
 import FirebaseFirestore
 import FirebaseDatabase
+import WatchConnectivity
 
 class SignUpViewController: UIViewController {
 
@@ -60,23 +61,12 @@ class SignUpViewController: UIViewController {
         
         return true
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+  
     
     
-    @IBAction func createAccountButton(_ sender: Any)
-    {
-        if isValidData()
-        {
-            //Do the firebase Authentication
-            
+    @IBAction func createAccountButton(_ sender: Any) {
+        if isValidData() {
+            // Do the Firebase Authentication
             let email = emailTF.text ?? ""
             let password = passwordTF.text ?? ""
             let name = userNameTF.text ?? ""
@@ -84,72 +74,61 @@ class SignUpViewController: UIViewController {
             loadingIndicator.startAnimating()
             loadingIndicator.isHidden = false
             
-            
             Auth.auth().createUser(withEmail: email, password: password) { result, error in
-                //create user is a method of fire base which is responsable for creating a user and it also retrns a completion handler/ function
-                //that function is result and error
-                //if the creation is succesful then the result parameter will have a user object and that user object is a reference to the user which we created
-                //if it failed then  the error object will have a value
+                // Stop the loading indicator whether the request was successful or not
+                self.loadingIndicator.stopAnimating()
+                self.loadingIndicator.isHidden = true
                 
-                //if there is a value in the user
+                // Check if user creation was successful
                 if let user = result?.user {
-                    //Account Created
-                    //create reference to the firebase database
+                    
+                    // Send the UserID to the watch if the watch is reachable
+                    if WCSession.default.isReachable {
+                        let message = ["UserID": user.uid]
+                        WCSession.default.sendMessage(message, replyHandler: nil, errorHandler: nil)
+                    }
+                    // Account created, create reference to the Firebase database
                     let ref = Database.database().reference()
-                    //create hiarchy
-                    //
+                    // Create hierarchy
                     let dataobj = [
                         "username": name,
                         "email": email,
                         "goals": "Car"
-                        
                     ]
-                    ref.child("Users").child(user.uid).setValue(dataobj) { err, ref in
-                        
-                        self.loadingIndicator.stopAnimating()
-                        self.loadingIndicator.isHidden = true
-                        
+                    ref.child("Users").child(user.uid).setValue(dataobj) { err, _ in
+                        // Check if there was an error
                         if let error = err {
                             showAlert(withTitle: "", Message: error.localizedDescription, controller: self)
-                        }
-                        else
-                        {
-                            //alert the user that acount was created then nav to the next screen
-                            let userCreatedAlert = UIAlertController(title: "", message: "Account created successfully", preferredStyle: .alert)  //<-- KEEP TRYING!!!!!!
-                            
+                        } else {
+                            // Alert the user that the account was created then navigate to the next screen
+                            let userCreatedAlert = UIAlertController(title: "", message: "Account created successfully", preferredStyle: .alert)
                             let ok = UIAlertAction(title: "OK", style: .default, handler: { _ in
                                 let SB = UIStoryboard(name: "Main", bundle: nil)
                                 let vc = SB.instantiateViewController(withIdentifier: "TabBarController")
                                 vc.modalPresentationStyle = .overFullScreen
                                 self.present(vc, animated: true)
-                                
                             })
-                            
                             userCreatedAlert.addAction(ok)
                             
-                            self.present(userCreatedAlert, animated: true)
+                            // Send the UserID to the watch if the watch is reachable
+                            if WCSession.default.isReachable {
+                                let message = ["UserID": user.uid]
+                                WCSession.default.sendMessage(message, replyHandler: nil, errorHandler: nil)
+                            }
                             
+                            self.present(userCreatedAlert, animated: true)
                         }
-                        
-                    }}
-                else
-                {
+                    }
+                } else {
+                    // User creation failed, show an error message
                     showAlert(withTitle: "", Message: error?.localizedDescription ?? "Server Error", controller: self)
                 }
-                
             }
-            
         }
     }
+
     
    
-//    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool
-//    {
-//        if successfulSignIn == true
-//        {
-//            return true
-//        }
-//        return false
-//    }
+
     
 }

@@ -28,6 +28,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate{
         
         return true
     }
+    
+    
+    
+    
 
     // MARK: UISceneSession Lifecycle
     
