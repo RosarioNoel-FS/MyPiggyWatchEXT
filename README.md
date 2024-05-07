@@ -2,7 +2,7 @@
 
 Git Link - https://github.com/RosarioNoel-FS/MyPiggyWatchEXT
 
-# **WatchGoals - A Financial Goal Tracking App**
+# **MyPiggy - A Financial Goal Tracking App**
 
 A simple yet powerful application that tracks your Financial goal progress on your iPhone and Apple Watch. It's built using Swift and leverages Apple's WatchConnectivity to communicate between the iPhone and Apple Watch.
 
